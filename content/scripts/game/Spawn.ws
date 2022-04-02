@@ -39,8 +39,13 @@ function _convert(path: string): string {
             return _mainPath("cirilla");
         case "triss":
             return _mainPath("triss");
+
         case "keira_metz": case "keira":
-            return _mainPath("keira_metz");
+            return _mainCharPath("keira_metz");
+        case "geels":
+            return _mainCharPath("geels");
+        case "ciri_young":
+            return _mainCharPath("ciri_young");
 
         case "eskel":
             return _secondPath("eskel");
@@ -647,7 +652,18 @@ function _convert(path: string): string {
             return _bloodPath("spirit_cat");
         case "vivienne_bird":
             return _bloodPath("vivienne_bird_form");
-
+        case "fleder":
+            return _bloodPath("fleder");
+        case "fairy_werewolf":
+            return _bloodPath("bigbadwolf");
+        case "spriggan":
+            return _bloodPath("spriggan");
+        case "gravier":
+            return _bloodPath("gravier");
+        case "fairy_witch":
+            return _bloodPath("fairytale_witch");
+        case "basilisk_white":
+            return _bloodPath("basilisk_white");
 
 
         case "water_hag_late":
@@ -718,6 +734,10 @@ function _convert(path: string): string {
 
 function _mainPath(n: string): string {
     return "quests/main_npcs/" + n + ".w2ent";
+}
+
+function _mainCharPath(n: string): string {
+    return "characters/npc_entities/main_npc/" + n + ".w2ent";
 }
 
 function _secondPath(n: string): string {
