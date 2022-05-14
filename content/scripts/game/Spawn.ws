@@ -89,6 +89,8 @@ function _convert(path: string): string {
             return _secondPath("zoltan_chivay");
         case "tomira": case "ass":
             return _secondPath("prologue_village_herbalist");
+        case "djinn":
+            return _secondPath("djinn");
 
         case "eredin":
             return _npcPath("enemy_eredin");
@@ -665,6 +667,13 @@ function _convert(path: string): string {
         case "basilisk_white":
             return _bloodPath("basilisk_white");
 
+        case "lady_of_lake":
+            return _bloodMinorQuestPath("mq7006_the_paths_of_destiny/characters/mq7006_lady_of_the_lake");
+        case "living_statue":
+            return _bloodMinorQuestPath("mq7007_gargoyles/characters/mq7007_living_statues");
+        case "living_statue_mage":
+            return _bloodMinorQuestPath("mq7007_gargoyles/characters/mq7007_statue_mage");
+
 
         case "water_hag_late":
             return _bloodLivingPath("water_hag_late");
@@ -725,6 +734,13 @@ function _convert(path: string): string {
             return _hosMonsterPath("harpy_helmet_lvl1");
         case "harpy_helmet_erynia":
             return _hosMonsterPath("harpy_helmet_lvl3__erynia");
+
+        case "ofir_soldier_no_shield":
+            return _hosQuestPath("q601_intro/characters/q601_hakland_soldiers_scene_no_shield");
+        case "ofir_soldier_spear":
+            return _hosQuestPath("q601_intro/characters/q601_hakland_soldiers_spear");
+        case "ofir_soldier":
+            return _hosQuestPath("q601_intro/characters/q601_hakland_soldiers");
 
         case "geralt":
             return "gameplay\templates\characters\player\player.w2ent";
@@ -828,6 +844,10 @@ function _bloodLivingPath(n: string): string {
     return "dlc/bob/data/living_world/enemy_templates/" + n + ".w2ent";
 }
 
+function _bloodMinorQuestPath(n: string): string {
+    return "dlc/bob/data/quests/minor_quests/quest_files/" + n + ".w2ent";
+}
+
 
 function _hosMainPath(n: string) : string {
     return "dlc/ep1/data/characters/npc_entities/main_npc/" + n + ".w2ent";
@@ -838,7 +858,9 @@ function _heartsSecPath(n: string) : string {
 function _hosMonsterPath(n: string) : string {
     return "dlc/ep1/data/characters/npc_entities/monsters/" + n + ".w2ent";
 }
-
+function _hosQuestPath(n: string) : string {
+    return "dlc/ep1/data/quests/quest_files/" + n + ".w2ent";
+}
 
 
 function _spawnFromPath(path : string, optional quantity : int, optional distance : float, optional isHostile : bool )
